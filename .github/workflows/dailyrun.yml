@@ -3,7 +3,7 @@ name: Run Cypress Tests Daily
 on:
   schedule:
     # Runs at 10:00 AM UTC every day
-    - cron: '50 12 * * *'
+    - cron: '30 13 * * *'
   workflow_dispatch:
 
 jobs:
