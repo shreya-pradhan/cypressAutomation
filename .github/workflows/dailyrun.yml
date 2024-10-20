@@ -4,6 +4,7 @@ on:
   schedule:
     # Runs at 10:00 AM UTC every day
     - cron: '50 12 * * *'
+  workflow_dispatch:
 
 jobs:
   cypress:
