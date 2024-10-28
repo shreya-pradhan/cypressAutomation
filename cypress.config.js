@@ -4,6 +4,7 @@ const path = require('path');
 const xlsx = require('xlsx');
 
 module.exports = defineConfig({
+  projectId: "c74uva",
   e2e: {
     setupNodeEvents(on, config) {
       on('task', {
