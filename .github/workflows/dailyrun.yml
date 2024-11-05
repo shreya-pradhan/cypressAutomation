@@ -2,23 +2,23 @@ name: Run Cypress Tests Daily
 
 on:
   schedule:
-    # Runs at 10:00 AM UTC every day
-    - cron: '15 16 * * *'
+    # Runs at 16:59 UTC every day
+    - cron: '59 16 * * *'
   workflow_dispatch:
 
 jobs:
   cypress:
     runs-on: ubuntu-latest
 
+    strategy:
+      matrix:
+        parallel: [1, 2, 3] # Adjust the number of parallel runs as needed
+
     steps:
       - name: Checkout code
         uses: actions/checkout@v2
         
       - name: Run Cypress Tests in Chrome
-        uses: cypress-io/github-action@v6
-        with:
-          browser: chrome
-          record: true
-          parallel: true
+        run: npx cypress run --browser chrome --env grepTags='@smoke' --parallel --record
         env:
           CYPRESS_RECORD_KEY: 'fedd668a-3caa-41ff-b13d-083325f6993e'
