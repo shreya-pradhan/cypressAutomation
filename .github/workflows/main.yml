@@ -21,4 +21,7 @@ jobs:
           parallel: true
         env:
           CYPRESS_RECORD_KEY: 'fedd668a-3caa-41ff-b13d-083325f6993e'
+          USER_NAME: ${{ secrets.USER_NAME }}
+          USER_PASSWORD: ${{ secrets.USER_PASSWORD }}
+          URL: ${{ secrets.URL }}
      
