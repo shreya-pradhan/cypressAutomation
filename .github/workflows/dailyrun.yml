@@ -3,7 +3,7 @@ name: Run Cypress Tests Daily
 on:
   schedule:
     # Runs at 10:00 AM UTC every day
-    - cron: '30 13 * * *'
+    - cron: '15 16 * * *'
   workflow_dispatch:
 
 jobs:
@@ -13,14 +13,12 @@ jobs:
     steps:
       - name: Checkout code
         uses: actions/checkout@v2
-
-      - name: Set up Node.js
-        uses: actions/setup-node@v2
+        
+      - name: Run Cypress Tests in Chrome
+        uses: cypress-io/github-action@v6
         with:
-          node-version: '16'  # Replace with your required Node.js version
-
-      - name: Install dependencies
-        run: npm install  # or yarn install if you're using Yarn
-
-      - name: Run Cypress tests
-        run: npx cypress run  # or npm run cypress run if you have a script defined
+          browser: chrome
+          record: true
+          parallel: true
+        env:
+          CYPRESS_RECORD_KEY: 'fedd668a-3caa-41ff-b13d-083325f6993e'
