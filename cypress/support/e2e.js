@@ -18,6 +18,8 @@ import './commands'
 Cypress.on('uncaught:exception', (err, runnable) => {
     return false;
   });
+const registerCypressGrep = require('@cypress/grep')
+registerCypressGrep()
 
 // Alternatively you can use CommonJS syntax:
 // require('./commands')

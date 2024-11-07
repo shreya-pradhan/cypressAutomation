@@ -7,14 +7,14 @@ describe('log into notes app', () => {
         cy.visit('https://practice.expandtesting.com/notes/app/login')
   })
 
-  it.skip('verify user gets logged in with valid credentials', () => {
+  it('verify user gets logged in with valid credentials', () => {
     
     cy.get('#email').type('shreya19.sp@gmail.com')
     cy.get('#password').type('Test123$$')
     cy.get('[data-testid=login-submit]').click()
   })
 
-  it.skip('should log in using the API', () => {
+  it('should log in using the API', () => {
 
             
         const credentials = {"email":"shreya19.sp@gmail.com","password":"Test123$$"}
@@ -41,7 +41,7 @@ describe('log into notes app', () => {
       });
 
   
-  it.skip('should log in using the API', () => {
+  it('should log in using the API', () => {
 
         url=Cypress.env('url')
         username = Cypress.env('user_name')

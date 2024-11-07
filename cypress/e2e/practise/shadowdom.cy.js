@@ -3,6 +3,7 @@
 describe('log into notes app', () => {
   beforeEach(() => {
         cy.visit('https://practice.expandtesting.com/shadowdom')
+        
 
        
   })

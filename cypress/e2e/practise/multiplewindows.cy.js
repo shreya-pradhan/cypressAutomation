@@ -10,7 +10,7 @@ describe('verify input fields', () => {
      
     })
   
-    it.only('should display all 6 steps of the scientific method ', () => {
+    it('should display all 6 steps of the scientific method ', () => {
       cy.visit('https://practice.expandtesting.com/spies-stubs-clocks')
       cy.clock()
       cy.get('#discoverScientificMethod').click()
@@ -26,7 +26,7 @@ describe('verify input fields', () => {
 
     })
 
-    it.skip('should display all 6 steps of the scientific method with a controlled clock', () => {
+    it('should display all 6 steps of the scientific method with a controlled clock', () => {
       cy.visit('https://practice.expandtesting.com/spies-stubs-clocks')
       cy.clock()
       cy.get('#discoverScientificMethod').click()

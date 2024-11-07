@@ -52,7 +52,7 @@ describe('Test related to tables', () => {
           });
       });
   
-  it.only('verify table correct',()=>{
+  it('verify table correct',{ tags: 'smoke' },()=>{
         let excelFilePath='cypress/fixtures/Book1.xlsx'
 
         cy.task('readexcel',  excelFilePath ).then((excelArray) => {

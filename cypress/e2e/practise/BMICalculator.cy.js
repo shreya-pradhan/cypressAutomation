@@ -2,7 +2,7 @@
 
 describe('verify input fields', () => {
  
-  it('verify check and uncheck check boxes', () => {
+  it('verify check and uncheck check boxes',{tags:"@smoke"}, () => {
     cy.visit('https://practice.expandtesting.com/bmi')    
      let weight=70;
      let height =190;

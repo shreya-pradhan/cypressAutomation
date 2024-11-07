@@ -18,18 +18,19 @@ describe('log into notes app', () => {
       
     })
 
-    it('edit a new note', () => {
+    it('edit a new note [smoke]', () => {
      
       
 
-        cy.wait(5000)
+      cy.viewport('macbook-15')
+      cy.wait(200)
         notespage.ClickOnEditButton()
         cy.get('#title').clear().type('notesedited')
         cy.get('#description').clear().type('notedescription')
         cy.get('.btn').contains('Save').click({force:true})
     })
 
-    it.only('edit and delete new note', () => {
+    it('edit and delete new note', () => {
      
         const addnotesbody = {
                 title: "title before editing",

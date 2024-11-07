@@ -56,7 +56,7 @@ describe('verify input fields', () => {
     })
     
 
-  it.skip('verify weekly cost', () => {
+  it('verify weekly cost', () => {
     cy.visit('https://practice.expandtesting.com/webpark')    
     var parkingtypes=['Long-Term Garage Parking','Long-Term Surface Parking']
     const randomType = types[Math.floor(Math.random() * types.length)];
