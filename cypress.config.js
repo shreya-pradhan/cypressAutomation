@@ -7,6 +7,7 @@ const generator = require('mochawesome-report-generator');
 
 
 module.exports = defineConfig({
+
   env: {
     grepFilterSpecs: true // Enables spec filtering based on grep
   },
@@ -19,6 +20,7 @@ module.exports = defineConfig({
     // Customize output paths if needed
     reportDir: 'cypress/reports/mochawesome',
 },
+
   e2e: {
     setupNodeEvents(on, config) {
       require('@cypress/grep/src/plugin')(config); // Load grep plugin
