@@ -2,7 +2,7 @@
 
 const cypress = require("cypress");
 
-describe('log into notes app', () => {
+describe('log into notes app edit', () => {
   beforeEach(() => {
         cy.visit('https://practice.expandtesting.com/notes/app/login')
   })
